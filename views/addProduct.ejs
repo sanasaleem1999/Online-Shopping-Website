@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Product</title>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0 (1)/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0 (1)/font-awesome-4.7.0/css/font-awesome.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/addProduct.css" type="text/css" />
+    <link rel="stylesheet" href="../styles/index.css"  type="text/css" />
+<link rel="stylesheet" href="../styles/skinCare.css"  type="text/css" />
+    <style>
+            * {
+            margin: 0px;
+            padding: 0px;
+            border: none;
+            text-decoration: none;
+          }
+          .row , .col{
+            padding: 0 !important;
+            margin: 0 !important;
+          }
+
+          .first-nav {
+            height: 75px;
+          }
+          .inherit {
+            height: inherit;
+          }
+          .skin-store {
+            margin-left: 15%;
+            margin-top: 12px !important;
+            font-family: "Times New Roman", Times, serif;
+          }
+
+          .mic-icon {
+            top: 22px !important;
+            left: 0px !important;
+            color: #212121 !important; 
+          }
+
+          .has-search .form-control {
+            padding-right: 2.6rem;
+            border-bottom: none !important;
+            /* background-color: rgba(221, 217, 217, 0.781) !important; */
+            background-color: #eeeeee !important;
+            margin-top: 15px !important;
+            border-radius: 7px !important;
+            padding-left: 35px !important;
+          }
+          .form-control:focus {
+            border-bottom: none!important;
+            box-shadow: none!important;
+          }
+          .has-search .form-control-feedback {
+            position: absolute;
+            right: 0;
+            z-index: 2;
+            display: block;
+            width: 2.375rem;
+            height: 2.375rem;
+            line-height: 2.375rem;
+            text-align: center;
+            pointer-events: none;
+            margin-top: 23px;
+            color: #000000;
+          }
+          .detail {
+            margin-top: 12px !important;
+            display: flex;
+            justify-content: flex-end;
+          }
+          .detail:after {
+            content: '';
+            display: block;
+            clear: both;
+          }
+          .number {
+            padding-top: 12px !important;
+            padding-right: 10px !important;
+            margin-right: 10px !important;
+            border-right: 2px solid black;
+          }
+          .call-icon {
+            margin-right: 5px;
+            font-size: 20px;
+            display:inline-flex;
+            vertical-align: middle;
+          }
+          .user-icon {
+            font-size: 50px;
+            margin-right: 10px;
+            cursor: pointer;
+          }
+
+          .loginDiv {
+            height: 370px;
+            width: 280px;
+            border-radius: 5px;
+            position: absolute;
+            top: 70px;
+            right: 0px;
+            background-color: white;
+            z-index: 1000;
+            display: none;
+            font-family: "Merriweather Sans", sans-serif;
+          }
+          .login {
+            background-color: #eeeeee;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+          }
+          .login-detail {
+            width: 84%;
+            margin: auto;
+            margin-top: 25px;
+          }
+          .login-input {
+            border: 1px solid rgb(160, 153, 153) !important;
+            height: 30px !important;
+            padding-left: 5px !important;
+            font-size: 15px !important;
+            margin-top: 10px !important;
+            width: inherit !important;
+            width: 97% !important;
+          }
+          .login-label {
+            font-size: 18px !important;
+            color: black !important;
+          }
+          .input-field input:focus + label {
+            color: black !important;
+          }
+          .input-field input:focus {
+            border-bottom: 1px solid rgb(160, 153, 153) !important;
+            box-shadow: 0 1px 0 0 rgb(160, 153, 153) !important;
+          }
+          .login-btn {
+            width: 100%;
+            height: 30px;
+            text-transform: uppercase;
+            color: #000000;
+            background-color: white;
+            border: 1px solid #212121 ;
+            font-weight: 600;
+          }
+          .login-btn:hover {
+            background-color: #212121 ;
+            color: white;
+          }
+          .login-icon-div {
+            text-align: center;
+          }
+          .login-icon {
+            font-size: 3em !important;
+            cursor: pointer;
+            margin: 5px;
+          }
+          .login-Ficon {
+            color: #1a237e;
+          }
+          .login-Gicon {
+            color: #d50000;
+          }
+          .login-Ficon:hover,
+          .login-Gicon:hover {
+            opacity: 0.9;
+          }
+          .forgot-password {
+            color: #000000;
+            text-decoration: underline;
+          }
+          .forgot-password:hover {
+            text-decoration: none;
+          }
+          .register-btn {
+            width: 100%;
+            height: 30px;
+            text-transform: uppercase;
+            color: white;
+            background-color: #212121 ;
+            font-weight: 600;
+            margin-top: 15px;
+          }
+          .register-btn:hover {
+            background-color: white;
+            color: #212121 ;
+            border: 1px solid #212121 ;
+          }
+
+          .second-nav {
+            height: 40px;
+            line-height: 40px;
+          }
+
+          .third-nav {
+            height: 35px !important;
+            text-align: center !important;
+          }
+          .third-nav-text {
+            text-transform: uppercase;
+            margin: auto !important;
+            font-size: 17px;
+            font-weight: 500;
+          }
+          .newsletter-div {
+            height: 110px;
+            border-top: 2px solid #bdbdbd;
+            margin-top: 30px !important;
+          }
+          .newsletter-text {
+            padding-left: 55px !important;
+            margin-top: 30px !important;
+          }
+          .newsletter-p1 {
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .newsletter-p2 {
+            font-size: 16px;
+            font-weight: 500;
+          }
+          .newsletter-send {
+            padding-top: 40px !important;
+            border-right: 2px solid #bdbdbd;
+            height: 100%;
+          }
+          .newsletter-search {
+            border-bottom: none !important;
+            background-color: white !important;
+            padding-left: 10px !important;
+            width: 60% !important;
+            height: 35px !important;
+          }
+          .newsletter-search:focus {
+            border-bottom: none!important;
+            box-shadow: none!important;
+          }
+          .newsletter-btn {
+            height: 33px;
+            width: 25%;
+            color: white;
+            background-color: #212121;
+            margin-top: 0px !important;
+          }
+          .contact-div {
+            margin-top: 23px !important;
+            padding-right: 40px !important;
+            display: flex;
+            justify-content: flex-end;
+          }
+          .contact-text {
+            font-size: 17px;
+            margin-right: 20px;
+            font-weight: 600;
+            padding-top: 13px;
+          }
+          .contact-icon {
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+            margin-left: 10px;
+          }
+
+          .footer-col {
+            text-align: center;
+          }
+          .footer-col-heading {
+            font-size: 28px;
+            font: 2.3vw "Oswald", sans-serif;
+            margin-bottom: 7px;
+          }
+          .footer-col-text {
+            font-size: 17px;
+            text-transform: uppercase;
+          }
+          .payment {
+            height: 40px; 
+            width: 60px;
+            margin: 5px;
+            cursor: pointer;
+          }
+          .connect-div {
+            margin-top: 10px !important;
+          }
+          .connect {
+            font-size: 40px !important;
+            font: 2.3vw "Oswald", sans-serif;
+          }
+          .connect-text-mid {
+            font-size: 25px !important;
+          }
+          .connect-text {
+            display: flex;
+            flex-direction: row;
+          }
+          .connect-text:before,
+          .connect-text:after {
+            content: "" !important;  
+            flex: 1 1 !important; 
+            border-bottom: 1px solid white !important; 
+            margin: auto !important;
+          }
+          .connect-icon {
+            font-size: 2.5em !important;
+            margin-left: 10px;
+            margin-right: 10px;
+            cursor: pointer;
+          }
+          .footer-second-last {
+            width: 100%;
+            border: 1px solid white;
+            margin-top: 5px !important;
+          }
+          .footer-last {
+            border: 10px solid #212121 ;
+          }
+          .suman-per-tab-controls {
+            position: relative;
+            z-index:-999999;
+          }
+
+    </style>
+  </head>
+  <body >
+    <%- include('./includes/nav.ejs') %>
+    <div class="add-product-div" style="margin-top: 20px;">
+      <form id="submitform" class="<%= editMode %>">
+        <div class="row" id="item._id">
+          <p class="add-new-prod"><% if(editMode){ %>EDIT Product<% } else { %> ADD NEW Product<%} %></p>
+        </div>
+        <div class="row valign-wrapper">
+          <div class="col l4">
+            <p>Product Name</p>
+          </div>
+          <div class="col l8">
+            <div class="input-field addProd-input-div">
+              <input type="text" class="addProd-input" name="prodname" value="<% if (editMode) { %><%= item.name %><% } %>">
+            </div>
+          </div>
+        </div>
+        <div class="row valign-wrapper">
+          <div class="col l4">
+            <p>Category</p>
+          </div>
+          <div class="col l8">
+            <div class="input-field addProd-input-div">
+              <input type="text" class="addProd-input" name="prodcategory" value="<% if (editMode) { %><%= item.category %><% } %>">
+            </div>
+          </div>
+        </div>
+        <div class="row valign-wrapper">
+          <div class="col l4">
+            <p>Brand Name</p>
+          </div>
+          <div class="col l8">
+            <div class="input-field addProd-input-div">
+              <input type="text" class="addProd-input"  name="prodbrand"value="<% if (editMode) { %><%= item.brand %><% } %>">
+            </div>
+          </div>
+        </div>
+        <div class="row valign-wrapper">
+          <div class="col l4">
+            <p>Price</p>
+          </div>
+          <div class="col l8">
+            <div class="input-field addProd-input-div">
+              <input type="text" class="addProd-input" name="prodprice" value="<% if (editMode) { %><%= item.price %><% } %>">
+            </div>
+          </div>
+        </div>
+        <div class="row valign-wrapper">
+          <div class="col l4">
+            <p>Benefits</p>
+          </div>
+          <div class="col l8">
+            <div class="input-field addProd-input-div">
+              <input type="text" class="addProd-input" name="prodbenefits"value="<% if (editMode) { %><%= item.benefits %><% } %>">
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="file-field input-field">
+            <div class="btn file-btn">
+              <span>File</span>
+              <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" name="url" value="<% if (editMode) { %><%= item.title %><% } %>">
+            </div>
+          </div>
+        </div>  -->
+        <div class="row">
+          <div class="input-field">
+            <!-- <button type="submit"> Add </button> -->
+            <div class="btn add-btn">
+               <input type="submit"  class="text-white" value="<% if (editMode) { %>EDIT<% } else{ %> ADD <% } %>" />
+            </div>
+          </div>
+        </div>
+      </form>
+      
+
+
+  
+        <!-- <div class="col l4">
+          <p>Product Name</p>
+          <p>Category</p>
+          <p>Brand Name</p>
+          <p>Price</p>
+          <p>Benefits</p>
+          <p>File</p>
+        </div>
+        <div class="col l8">
+          <div class="input-field">
+            <input type="text" class="register-input">
+          </div>
+          <div class="input-field">
+            <input type="text" class="register-input">
+          </div>
+          <div class="input-field">
+            <input type="text" class="register-input">
+          </div>
+          <div class="input-field">
+            <input type="text" class="register-input">
+          </div>
+          <div class="input-field">
+            <input type="text" class="register-input">
+          </div>
+        </div> -->
+      
+    </div>
+    <%- include('./includes/footer.ejs') %>
+
+    <script>
+       const product = document.getElementById('submitform');
+       console.log(product);
+       const mode = product.className;
+       console.log(mode)
+       const productID = product.firstElementChild.id;
+       console.log(productID)
+       product.addEventListener('submit',async(e)=>{
+         e.preventDefault();
+         const token = JSON.parse(localStorage.getItem('key'));
+         console.log(token)
+        const name = product.prodname.value;
+        console.log(name);
+        const price = product.prodprice.value;
+        const brand = product.prodbrand.value;
+        const category = product.prodcategory.value;
+        const benefits = product.prodbenefits.value;
+        console.log(name, price, brand, category, benefits);
+        if(mode != true) {
+           const response = await fetch('/admin/productsubmitted', {
+              method: "POST",
+              headers: {
+                "Content-Type": "Application/json"
+              },
+              body: JSON.stringify({ name, price, brand, category, benefits})
+           })
+           response.json().then( data => {
+             const { msg } = data;
+             alert(msg);
+            // window.location = `/admin/imageupload/${productID}`
+           //  window.location = `/admin?token=${token}`
+           })
+       } else{
+          alert("Do you want To Edit?")
+          fetch('/admin/updated/'+ productID,{
+               method:"POST",
+               headers: {
+                 'Content-Type': "Application/json"
+               },
+               body: JSON.stringify({ name, price, brand, category, benefits})
+             }).then(res=>{
+               console.log('edit ho gaya');
+              const url = '/admin?token=' + token;
+             window.location = url;
+             })
+             console.log('submit hogaya product');
+         }
+
+
+
+         
+       })
+    </script>
+
+  </body>
+</html>

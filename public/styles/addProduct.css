@@ -1,0 +1,50 @@
+.row , .col, p{
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .add-product-div {
+    margin-top: 30px !important;
+    width: 40%;
+    margin: 0 auto;
+    font-family: "Merriweather Sans", sans-serif;
+  }
+  .add-new-prod {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+  }
+  .input-field input:focus {
+    border-bottom: 1px solid #e0e0e0 !important;
+    box-shadow: 0 1px 0 0 #e0e0e0 !important;
+  }
+  .addProd-input {
+    border: 1px solid #e0e0e0 !important;
+    height: 30px !important;
+    margin: 0px !important;
+  }
+  .addProd-input-div {
+    margin: 15px 0px 15px 0px !important;
+  }
+  .file-btn,
+  .file-btn:hover {
+    background-color: white; 
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+    box-shadow: none;
+  }
+  .add-btn {
+    width: 300px;
+    background-color: white;
+    /* color: white !important; */
+    border: 2px solid black;
+    box-shadow: none;
+    font-weight: bold;
+  }
+  .add-btn:hover {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    box-shadow: none;
+  }

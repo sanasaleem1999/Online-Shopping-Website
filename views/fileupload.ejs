@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+</head>
+<body>
+    <div>
+        <form id="upload-picture" class="<%= key %>">
+            <div>
+                <label for="file"> Upload Image</label>
+                <input type="file" name="uploadimage" id="file"/>
+            </div>
+            <button type="submit"> Upload </button>
+        </form>
+    </div>
+
+
+
+
+    <script>
+        const picture = document.querySelector('#upload-picture');
+        const id = picture.className;
+        console.log(id);
+        picture.addEventListener('submit', async(event) => {
+            event.preventDefault();
+            const file = document.querySelector('#file');
+            const formData = new FormData();
+            formData.append('uploadimage', file.files[0]);
+            const api = await fetch(`/admin/postimage/${id}`, {
+              method: "POST",
+              body: formData
+            })
+            api.json().then( data => {
+                const { msg } = data;
+                console.log(msg);
+                const token = JSON.parse(localStorage.getItem('key'));
+                window.location = `/admin?token=${token}`
+            })
+
+        })
+    </script>
+</body>
+</html>

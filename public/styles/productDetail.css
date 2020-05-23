@@ -1,0 +1,46 @@
+* {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.test {
+  border: 7px double #eeeeee;
+  margin: 10px auto !important;
+  padding: 13px;
+}
+.product-img {
+  height: 488px;
+  width: 100%;
+  margin: 10px auto !important;
+}
+.prod-title {
+  font-weight: bold;
+}
+.prod-dtl {
+  margin: 0px;
+}
+.prod-detail-btn1,
+.prod-detail-btn2 {
+  height: 35px;
+  width: 100%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.prod-detail-btn1 {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.prod-detail-btn2 {
+  background-color: white;
+  border: 1px solid black;
+}
+.prod-detail-btn2:hover {
+  background-color: black;
+  color: white;
+}
+.description {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-top: 0px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= pageTitle %></title>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0 (1)/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0 (1)/font-awesome-4.7.0/css/font-awesome.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/register.css" type="text/css" />
+
+  </head>
+  <body>
+    <div class="register-div">
+      <p class="register">register</p>
+      <div class="register-icon-div">
+        <span class="register-icon" ><i class="fa fa-facebook-square register-Ficon"></i></span>
+        <span class="register-icon"><i class="fa fa-google-plus-square register-Gicon"></i></span>
+      </div>
+      <div class="">
+        <form id="signup-form" method="POST" action="/postsignup">
+        <div class="input-field">
+          <input placeholder="First Name" id="firstName" type="text" class="register-input" name="firstname">
+          <label for="firstName" class="register-label">First Name</label>
+        </div>
+        <div class="input-field">
+          <input placeholder="Last Name" id="lastName" type="text" class="register-input" name="lastname">
+          <label for="lastName" class="register-label">Last Name</label>
+        </div>
+        <div class="input-field">
+          <input placeholder="Email" id="email" type="text" class="register-input" name="email">
+          <label for="email" class="register-label">Email</label>
+        </div>
+        <div class="input-field">
+          <input placeholder="Password" id="password" type="text" class="register-input" name="password">
+          <label for="password" class="register-label">Password</label>
+        </div>
+        <input type="submit" name="hello" value="Create an account" class="register-btn">
+        </form>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+  </body>
+</html>

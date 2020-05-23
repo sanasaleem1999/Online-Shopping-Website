@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Add </title>
+</head>
+<body>
+
+    <div> <!--main div-->
+
+        <form  action="/admin/updated/<%= item._id %>" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="name" > Product Name</label>
+                <input type="text" id="name" name="name" value="<%= item.name %> "/>
+            </div>
+    
+            <div>
+                <label for="category" >Category</label>
+                <input type="text" id="category" name="category" value=" <%= item.category %>"/>
+            </div>
+    
+            <div>
+                <label for="brand"> Brand Name</label>
+                <input type="text" id="brand" name="brand" value=" <%= item.brand %>" />
+            </div>
+            
+            <div>
+                <label for="price" >Price</label>
+                <input type="text" id="price" name="price" value=" <%= item.price %>"/>
+            </div>
+
+
+
+            <div>
+                <label for="benefits" > Benefits </label>
+                <input type="text" id="benefits" name="benefits" value=" <%= item.benefits %>"/>
+            </div>
+
+            <div>
+                <label for="image"> Image </label>
+                <input type="file" id="image" name="image"/>
+            </div>
+
+            <button type="submit"> Update Product</button>
+    
+    
+    
+    
+        </form>
+        
+    
+    
+    </div>
+
+
+
+
+
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+
+</body>
+</html>

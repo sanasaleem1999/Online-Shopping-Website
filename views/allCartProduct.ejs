@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=pageTitle%></title>
+</head>
+<body>
+    <div>
+        <% products.forEach((i)=> {%>
+            <div>
+                <img src="/<%= i.productId.image %>" width="100px" height="200px"/>
+                <p><%= i.productId.name %></p>
+                <p><%= i.productId.category %></p>
+                <p><%= i.productId.brand %></p>
+                <p><%= i.productId.price %></p>
+                <p><%= i.productId.benefits %></p>
+                <button><a href="/admin/delete-cart/<%= i.productId._id %>">Delete</a></button>
+            </div>
+            <%   }) %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  text-decoration: none;
+}
+.row , .col{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.li-item {
+  margin: 3px;
+  color: black;
+}
+.li-item:hover {
+  font-weight: 500;
+  color: #616161;
+}
+.collapsible li.active i {
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+.expand-icon {
+  margin-left: 60% !important ;
+}
+.expand-icon1 {
+  margin-left: 70% !important ;
+}
+.expand-icon2 {
+  margin-left: 75% !important ;
+}
+
+.page-banner {
+  background-image: url('../images/bannerImg.jpg');
+  height: 300px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* padding-top: 5%; */
+}
+.skincare {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 45px;
+  /* margin-left: 45%; */
+  width: 26%;
+  text-align: center;
+  color: white;
+  background-color: black;
+  opacity: 0.6;
+}
+
+.product-card {
+  box-shadow: none;
+  margin: 10px;
+}
+.product-image {
+  height: 320px;
+}
+.card-img:hover {
+  background-color: black !important;
+}
+.product-detail {
+  text-align: center;
+  border: 1px solid red;
+  padding-top: 5px !important;
+  font-weight: 600;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+
+}
+
+.test {
+  width: 100%;
+  padding-bottom: 10px !important;
+  display: none;
+}
+.card-img:hover .product-image {
+  filter: brightness(40%);
+  /* animation: color_change 50s 1; */
+}
+/* @keyframes color_change {
+  0%,100% {
+    filter: brightness(40%);
+  }
+} */
+.card-img:hover .test {
+  display: block;
+}
+.order-btn {
+  font-size: 16px;
+  width: 100%;
+  height: 32px;
+  background-color: white;
+  font-weight: 600;
+}
+.order-btn:hover {
+  background-color: black;
+  color: white;
+}
+

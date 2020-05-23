@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= pageTitle %></title>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0 (1)/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./font-awesome-4.7.0 (1)/font-awesome-4.7.0/css/font-awesome.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.test {
+  border: 7px double #eeeeee;
+  margin: 10px auto !important;
+  padding: 13px;
+}
+.product-img {
+  height: 488px;
+  width: 100%;
+  margin: 10px auto !important;
+}
+.prod-title {
+  font-weight: bold;
+}
+.prod-dtl {
+  margin: 0px;
+}
+.prod-detail-btn1,
+.prod-detail-btn2 {
+  height: 35px;
+  width: 100%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.prod-detail-btn1 {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+.prod-detail-btn2 {
+  background-color: white;
+  border: 1px solid black;
+}
+.prod-detail-btn2:hover {
+  background-color: black;
+  color: white;
+}
+.description {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-top: 0px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col l6">
+          <img src="<%= items.image %>" alt="" class="product-img">
+        </div>
+        <div class="col l6">
+          <div class="test">
+            <h5 class="prod-title"><%= items.name %></h5>
+            <p>Product sub title</p>
+            <div class="row">
+              <div class="col l4">
+                <p class="prod-dtl">Availability</p>
+                <p class="prod-dtl">SKU</p>
+                <p class="prod-dtl">Brand</p>
+                <p class="prod-dtl">Category</p>
+              </div>
+              <div class="col l8">
+                <p class="prod-dtl">lorem</p>
+                <p class="prod-dtl">lipsum</p>
+                <p class="prod-dtl"><%= items.brand %></p>
+                <p class="prod-dtl"><%= items.category %></p>
+              </div>
+              <div class="col l12">
+                <h6 class="prod-title"><%= items.price %></h6>
+              </div>
+              <div class="col l6">
+                <input type="button" name="hello" value="Add to cart" class="prod-detail-btn1">
+              </div>
+              <div class="col l6">
+                <input type="button" name="hello" id="<%= items._id %>"  onclick="order(event)"value="Buy it now" class="prod-detail-btn2">
+              </div>
+            </div>
+            <hr>
+            <div>
+              <p class="description">Description</p>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
+                laudantium, totam rem aperiam.</p>
+            </div>
+            <div>
+              <p class="description">Benefits</p>
+              <p><%= items.benefits %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script>
+      async function order(event){
+        event.preventDefault();
+        const id = event.target.id;
+        alert(id);
+        const today = new Date();
+        console.log(today);
+        const token = JSON.parse(localStorage.getItem('key'));
+        console.log(token);
+        const response = await fetch(`/admin/order/${id}?token=${token}`, {
+          method: "POST",
+          headers: {
+            'Content-Type': "Application/json"
+          },
+          body: JSON.stringify({ today })
+        })
+
+      }
+    </script>
+  </body>
+</html>
